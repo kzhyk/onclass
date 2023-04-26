@@ -1,0 +1,345 @@
+
+/* 基本設定 */
+
+@charset "utf-8";
+
+
+/* 全体 */
+
+html {
+    color: #54514c;
+}
+
+body {
+    color: #54514c;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+/* ヘッダー */
+
+header {
+    position:relative;
+    height: 60px;
+}
+
+.logo {
+    display: inline-block;
+}
+
+.logo img {
+    width: 100%;
+}
+
+header .logo {
+    position: absolute;
+    top: 17px;
+    left: 15px;
+    width: 200px;
+}
+
+header nav {
+    display: none;
+}
+
+/* トップ画像 */
+#keyvisual {
+    width: 100%;
+}
+
+#keyvisual img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+/* メイン */
+
+#information ul {
+    list-style: none;
+}
+
+#information ul li {
+    padding: 10px;
+}
+
+#information ul li:nth-child(even) {
+    background-color: #F5F3F0;
+}
+
+#information ul li time {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+#information ul li p {
+    font-size: 14px;
+}
+
+#information ul li p::before {
+    content: "▶";
+    padding-right: 5px;
+}
+
+main {
+    width: 100%;
+}
+
+main h2 {
+    height: 40px;
+    padding-left: 15px;
+    background-color: #b99565;
+    color: #fff;
+    font-weight: normal;
+    line-height: 40px;
+}
+
+main .container {
+    padding: 10px;
+}
+
+#gourment article {
+    margin-bottom: 25px;
+}
+
+#gourment article figure {
+    padding-bottom: 10px;
+}
+
+#gourment article figure img {
+    width: 100%;
+}
+
+#gourment article .box_title {
+    padding: 5px 0 5px 10px;
+    border-left: 4px solid #402805;
+}
+
+#gourment article h3 {
+    margin-bottom: 7px;
+    font-size: 16px;
+}
+
+#gourment article p::before {
+    content: "-";
+    padding: 0 10px;
+}
+
+#gourment article p {
+    font-size: 14px;
+    line-height: 2em;
+}
+
+#gourment .area li {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #b99565;
+    color: #fff;
+    font-size: 10px;
+}
+
+#gourment .area li + li {
+    margin-left: 5px;
+}
+
+/* フッター */
+
+footer {
+    width: 100%;
+    text-align: center;
+}
+
+footer ul {
+    background-color: #54514c;
+    padding : 30px 0;
+}
+
+footer ul li {
+    width: 280px;
+    height: 30px;
+    margin: 0 auto;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    font-size: 14px;
+    line-height: 30px;
+    transition: 0.3s;
+}
+
+footer ul li + li {
+    margin-top: 10px;
+}
+
+footer ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .logo {
+    width: 160px;
+    margin: 15px;
+}
+
+footer p small {
+    height: 30px;
+    font-size: 10px;
+    line-height: 30px;
+}
+
+footer ul li:hover {
+    background-color: #fff;
+}
+
+footer ul li:hover a {
+    color: #54514c;
+}
+
+/* レスポンシブ指定 */
+
+@media (min-width: 768px) {
+
+    /* ヘッダー */
+    header {
+        height: 80px;
+    }
+
+    header nav {
+        display: block;
+        position: absolute;
+        top: 21px;
+        right: 0;
+    }
+
+    header nav ul {
+        padding-right: 20px;
+    }
+
+    header nav ul li {
+        display: inline-block;
+        font-size: 17px;
+        line-height: 35px;
+        transition: 0.5s;
+    }
+
+    header nav ul li:hover {
+        border-radius: 2px;
+        background-color: #B99565;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0 20px;
+        color: #9C9B98;
+        text-decoration: none;
+    }
+
+    nav ul li:hover a {
+        color: #fff;
+    }
+
+    header .logo {
+        top: 24px;
+        left: 25px;
+        width: 254px;
+    }
+
+    #keyvisual {
+        margin-bottom: 30px;
+    }
+
+    /* information */
+
+    #information {
+        margin-bottom: 50px;
+    }
+        
+    #information ul li time {
+        margin: 0;
+        font-size: 14px;
+    }
+    
+    #information ul li p::before {
+        padding: 0 10px;
+    }
+
+    #information ul li p {
+        display: inline-block;
+    }
+
+    /* メイン */
+
+    main {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    main .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #gourment {
+        margin-bottom: 55px;
+    }
+    
+    #gourment article {
+        width: calc(50% - 5px);
+        margin-bottom: 20px;
+    }
+    
+    #gourment article h3 {
+        font-size: 19px;
+    }
+
+    #gourment .area li {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+        
+    #gourment article p {
+        font-size: 17px;
+    }
+
+    /* フッター */
+
+    footer ul {
+        padding: 20px 0;
+    }
+
+    footer ul li {
+        display: inline-block;
+        width: 120px;
+        font-size: 17px;
+    }
+
+    footer ul li + li {
+        margin: 0;
+        margin-left: 20px;
+    }
+
+    footer .logo {
+        width: 200px;
+        margin: 20px 0 0 0;
+    }
+
+    footer p {
+        padding-bottom: 10px;
+    }
+    
+    footer p small {
+        height: 20px;
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+
+}
+
+/* レスポンシブ調整 */
+
+@media (min-width: 1000px) {
+    main .container {
+        padding: 10px 0;
+    }
+}
