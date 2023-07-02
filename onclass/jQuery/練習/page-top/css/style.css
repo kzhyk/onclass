@@ -1,0 +1,14 @@
+
+/* 基本設定 */
+
+@charset "utf-8";
+
+/* 右下に固定 */
+#page-top a {
+    background-color: #1cb4d3;
+    bottom: 0;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+  }
